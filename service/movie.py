@@ -31,17 +31,17 @@ class MoiveService:
         
         if 'title' in data:
             movie.title = data['title']
-        elif 'description' in data:
+        if 'description' in data:
             movie.description = data['description']
-        elif 'trailer' in data:
+        if 'trailer' in data:
             movie.trailer = data['trailer']
-        elif 'year' in data:
+        if 'year' in data:
             movie.year = data['year']
-        elif 'rating' in data:
+        if 'rating' in data:
             movie.rating = data['rating']
-        elif 'genre_id' in data:
+        if 'genre_id' in data:
             movie.genre_id = data['genre_id']
-        elif 'director_id' in data:
+        if 'director_id' in data:
             movie.director_id = data['director_id']
         self.dao.update(movie)
         return movie
